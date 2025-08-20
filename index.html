@@ -2,135 +2,69 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
+  <title>Quarterly Earnings — RevealJS</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-  <title>Quarterly Earnings – RevealJS Deck</title>
-  <meta name="description" content="Interactive quarterly earnings presentation built with RevealJS." />
-  <!-- Reveal core CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/reveal.css">
-  <!-- Theme -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/theme/black.css" id="theme">
-  <!-- Code highlight theme -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/plugin/highlight/monokai.css">
+
+  <!-- Reveal core + theme -->
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@5/dist/reveal.css">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@5/dist/theme/white.css" id="theme">
+
+  <!-- Highlight.js theme for code syntax highlighting -->
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@5/plugin/highlight/monokai.css">
   <style>
-    /* Small helper style to keep things neat */
-    .footnote { font-size: 0.7em; opacity: 0.8; }
+    .byline { font-size: .9rem; opacity: .75; margin-top: .75rem; }
+    .kpi { font-size: 2.3rem; font-weight: 700; }
   </style>
 </head>
-
 <body>
-  <!-- Your email included as HTML comment for verification: 24ds1000121@ds.study.iitm.ac.in -->
   <div class="reveal">
     <div class="slides">
-      <!-- Title -->
+
+      <!-- Slide 1 (HTML) -->
       <section>
-        <h2>Quarterly Earnings Report</h2>
-        <h4>Financial Institution – Q2 FY2025</h4>
-        <p>Prepared by: <strong>24ds1000121@ds.study.iitm.ac.in</strong></p>
-        <p class="footnote">Press <kbd>S</kbd> for speaker notes. Use &larr; &rarr; to navigate.</p>
+        <h2>Financial Institution — Q2 Earnings</h2>
+        <p class="kpi">Revenue ↑ 8.2% • Net Income ↑ 5.1% • EPS $1.42</p>
+        <p class="byline">Prepared by: 24ds1000121@ds.study.iitm.ac.in</p>
         <aside class="notes">
-          Welcome the audience, outline the agenda (headline results, drivers, guidance).
-          Mention that this deck uses RevealJS with fragments, code, math, and notes.
+          Open with headline KPIs. Mention macro backdrop and rate environment.
         </aside>
       </section>
 
-      <!-- Markdown slide (requirement: at least one slide in Markdown) -->
+      <!-- Slide 2 (Markdown) -->
       <section data-markdown>
-        <script type="text/template">
-## Market Highlights (Markdown)
-- YoY loan growth **+12.3%**
-- Deposits growth **+9.8%**
-- NIM stable at **3.45%**
-- Credit cost improved by **18 bps**
+        <textarea data-template>
+### Highlights (Markdown)
 
-*This slide is authored in Markdown.*
-        </script>
-        <aside class="notes">
-          Keep this high level, set the scene for the detailed KPIs that follow.
-        </aside>
+- Deposits grew **3.4%** QoQ  
+- Loan book expanded **2.1%** with stable credit quality  
+- CET1 capital ratio at **12.3%**
+
+Note:
+These are topline highlights—set the frame before deep dive.
+        </textarea>
       </section>
 
-      <!-- Fragments (animated bullets) -->
+      <!-- Slide 3 (HTML with fragments animation) -->
       <section>
-        <h3>Headline Results</h3>
+        <h3>Drivers (Fragments)</h3>
         <ul>
-          <li class="fragment">Revenue: <strong>₹ 1,245 Cr</strong></li>
-          <li class="fragment">Net Income: <strong>₹ 128 Cr</strong></li>
-          <li class="fragment">EPS (diluted): <strong>₹ 6.45</strong></li>
-          <li class="fragment">CET1 Ratio: <strong>14.8%</strong></li>
+          <li class="fragment">Net interest income expansion from higher asset yields</li>
+          <li class="fragment">Fee revenue recovery in wealth & cards</li>
+          <li class="fragment">Operating leverage from disciplined expense control</li>
         </ul>
         <aside class="notes">
-          Items appear one-by-one to keep audience focused.
-          Call out EPS beat vs. consensus by ₹0.20 and strong capital buffers.
+          Step through each bullet with fragments; pause for questions.
         </aside>
       </section>
 
-      <!-- Code sample with syntax highlighting -->
+      <!-- Slide 4 (Markdown with code block + syntax highlighting) -->
       <section data-markdown>
-        <script type="text/template">
-### Reconciliation Check (Python sample)
+        <textarea data-template>
+### KPI Snapshot (Code with Syntax Highlighting)
+
 ```python
-revenue = 1245.0
-expenses = 1062.0
-provisions = 42.0
-tax_rate = 0.25
-
-ebt = revenue - expenses - provisions
-net_income = ebt * (1 - tax_rate)
-eps = net_income / 19.84  # shares (Cr)
-
-print(round(net_income, 2), round(eps, 2))
-```
-This snippet shows how internal analytics reproduce the reported EPS.
-        </script>
-        <aside class="notes">
-          Demo how finance/analytics can validate reported metrics programmatically.
-        </aside>
-      </section>
-
-      <!-- Math (financial formulas) -->
-      <section>
-        <h3>Key Formulas</h3>
-        <p>
-          ROE: \\( \\text{ROE} = \\dfrac{\\text{Net Income}}{\\text{Average Equity}} \\times 100\\% \\)
-        </p>
-        <p>
-          NPV: \\( \\text{NPV} = \\sum_{t=0}^{T} \\dfrac{CF_t}{(1+r)^t} \\)
-        </p>
-        <p class="footnote">Rendered via KaTeX using RevealJS math plugin.</p>
-        <aside class="notes">
-          Briefly remind stakeholders how we compute return metrics and project valuation.
-        </aside>
-      </section>
-
-      <!-- Closing / Q&A -->
-      <section>
-        <h2>Q&amp;A</h2>
-        <p>Contact: <strong>24ds1000121@ds.study.iitm.ac.in</strong></p>
-        <aside class="notes">
-          Invite questions. Provide a clear next-steps timeline for guidance update and filings.
-        </aside>
-      </section>
-    </div>
-  </div>
-
-  <!-- Reveal core JS -->
-  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/reveal.js"></script>
-  <!-- Plugins -->
-  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4/plugin/markdown/markdown.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4/plugin/notes/notes.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4/plugin/highlight/highlight.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4/plugin/math/math.js"></script>
-
-  <script>
-    Reveal.initialize({
-      hash: true,
-      slideNumber: 'c/t',
-      plugins: [ RevealMarkdown, RevealNotes, RevealHighlight, RevealMath.KaTeX ],
-      // Configure KaTeX (loaded via CDN by the plugin)
-      math: {
-        // KaTeX options if needed
-      }
-    });
-  </script>
-</body>
-</html>
+# Compute EPS in Python (demo)
+net_income = 1_250_000_000  # dollars
+weighted_shares = 880_000_000
+eps = net_income / weighted_shares
+print(f"EPS: ${eps:.2f}")
