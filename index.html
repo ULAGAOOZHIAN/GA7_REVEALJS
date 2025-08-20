@@ -3,37 +3,41 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-  <title>Quarterly Earnings – RevealJS Deck</title>
+  <title>Quarterly Earnings — RevealJS</title>
   <meta name="description" content="Interactive quarterly earnings presentation built with RevealJS." />
-  <!-- Reveal core CSS -->
+
+  <!-- Reveal core CSS + theme -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/reveal.css">
-  <!-- Theme -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/theme/black.css" id="theme">
-  <!-- Code highlight theme -->
+
+  <!-- Highlight.js theme for code syntax highlighting -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/plugin/highlight/monokai.css">
+
   <style>
-    /* Small helper style to keep things neat */
-    .footnote { font-size: 0.7em; opacity: 0.8; }
+    .footnote { font-size: .8rem; opacity: .8; }
+    .byline   { margin-top: .6rem; font-size: 1.05rem; }
   </style>
 </head>
 
 <body>
-  <!-- Your email included as HTML comment for verification: 24ds1000121@ds.study.iitm.ac.in -->
+  <!-- Verification (email in HTML comment): 24ds1000121@ds.study.iitm.ac.in -->
+
   <div class="reveal">
     <div class="slides">
-      <!-- Title -->
+
+      <!-- Slide 1: Title -->
       <section>
-        <h2>Quarterly Earnings Report</h2>
-        <h4>Financial Institution – Q2 FY2025</h4>
-        <p>Prepared by: <strong>24ds1000121@ds.study.iitm.ac.in</strong></p>
-        <p class="footnote">Press <kbd>S</kbd> for speaker notes. Use &larr; &rarr; to navigate.</p>
+        <h2>QUARTERLY EARNINGS REPORT</h2>
+        <h4>Financial Institution — Q2 FY2025</h4>
+        <p class="byline">Prepared by: <strong>24ds1000121@ds.study.iitm.ac.in</strong></p>
+        <p class="footnote">Press <kbd>S</kbd> for speaker notes. Use ← → to navigate.</p>
         <aside class="notes">
-          Welcome the audience, outline the agenda (headline results, drivers, guidance).
-          Mention that this deck uses RevealJS with fragments, code, math, and notes.
+          Welcome the audience and outline the agenda: headline results, key drivers, guidance.
+          Mention this deck demonstrates fragments, Markdown, code highlighting, math, and notes.
         </aside>
       </section>
 
-      <!-- Markdown slide (requirement: at least one slide in Markdown) -->
+      <!-- Slide 2: Markdown -->
       <section data-markdown>
         <script type="text/template">
 ## Market Highlights (Markdown)
@@ -45,11 +49,11 @@
 *This slide is authored in Markdown.*
         </script>
         <aside class="notes">
-          Keep this high level, set the scene for the detailed KPIs that follow.
+          High-level snapshot to set the context before drilling into KPIs.
         </aside>
       </section>
 
-      <!-- Fragments (animated bullets) -->
+      <!-- Slide 3: Fragments (animated bullets) -->
       <section>
         <h3>Headline Results</h3>
         <ul>
@@ -59,78 +63,51 @@
           <li class="fragment">CET1 Ratio: <strong>14.8%</strong></li>
         </ul>
         <aside class="notes">
-          Items appear one-by-one to keep audience focused.
-          Call out EPS beat vs. consensus by ₹0.20 and strong capital buffers.
+          Reveal each KPI with fragments; call out the EPS beat vs consensus and strong capital.
         </aside>
       </section>
 
-      <!-- Code sample with syntax highlighting -->
-      <section data-markdown>
-        <script type="text/template">
-### Reconciliation Check (Python sample)
-```python
+      <!-- Slide 4: Code sample with syntax highlighting + line focus -->
+      <section>
+        <h3>Reconciliation Check (Python)</h3>
+        <pre><code class="language-python" data-line-numbers="1-2|4,6-7|9-12">
 revenue = 1245.0
 expenses = 1062.0
+
 provisions = 42.0
 tax_rate = 0.25
 
 ebt = revenue - expenses - provisions
 net_income = ebt * (1 - tax_rate)
-eps = net_income / 19.84  # shares (Cr)
 
+shares_cr = 19.84
+eps = net_income / shares_cr
 print(round(net_income, 2), round(eps, 2))
-```
-This snippet shows how internal analytics reproduce the reported EPS.
-        </script>
+        </code></pre>
+        <p class="footnote">Code block is syntax-highlighted via Highlight.js; stepping focuses line groups.</p>
         <aside class="notes">
-          Demo how finance/analytics can validate reported metrics programmatically.
+          Walk through the reconciliation; show how analytics reproduce reported EPS.
         </aside>
       </section>
 
-      <!-- Math (financial formulas) -->
+      <!-- Slide 5: Math (KaTeX via Reveal Math plugin) -->
       <section>
         <h3>Key Formulas</h3>
-        <p>
-          ROE: \\( \\text{ROE} = \\dfrac{\\text{Net Income}}{\\text{Average Equity}} \\times 100\\% \\)
-        </p>
-        <p>
-          NPV: \\( \\text{NPV} = \\sum_{t=0}^{T} \\dfrac{CF_t}{(1+r)^t} \\)
-        </p>
-        <p class="footnote">Rendered via KaTeX using RevealJS math plugin.</p>
+        <p>ROE: \\( \\text{ROE} = \\dfrac{\\text{Net Income}}{\\text{Average Equity}} \\times 100\\% \\)</p>
+        <p>NPV: \\( \\text{NPV} = \\sum_{t=0}^{T} \\dfrac{CF_t}{(1+r)^t} \\)</p>
+        <p class="footnote">Rendered with KaTeX through the Reveal Math plugin.</p>
         <aside class="notes">
-          Briefly remind stakeholders how we compute return metrics and project valuation.
+          Briefly remind stakeholders of the return and valuation formulas used in analysis.
         </aside>
       </section>
 
-      <!-- Closing / Q&A -->
-      <section>
-        <h2>Q&amp;A</h2>
-        <p>Contact: <strong>24ds1000121@ds.study.iitm.ac.in</strong></p>
-        <aside class="notes">
-          Invite questions. Provide a clear next-steps timeline for guidance update and filings.
-        </aside>
-      </section>
-    </div>
-  </div>
-
-  <!-- Reveal core JS -->
-  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/reveal.js"></script>
-  <!-- Plugins -->
-  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4/plugin/markdown/markdown.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4/plugin/notes/notes.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4/plugin/highlight/highlight.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4/plugin/math/math.js"></script>
-
-  <script>
-    Reveal.initialize({
-      hash: true,
-      slideNumber: 'c/t',
-      plugins: [ RevealMarkdown, RevealNotes, RevealHighlight, RevealMath.KaTeX ],
-      // Configure KaTeX (loaded via CDN by the plugin)
-      math: {
-        // KaTeX options if needed
-      }
-    });
-  </script>
-</body>
-</html>
+      <!-- Slide 6: Mermaid Diagram (optional, professional data-flow view) -->
+      <section data-markdown>
+        <script type="text/template">
+### Data Flow (Mermaid)
+```mermaid
+graph TD
+  A[Data Ingestion] -->|ETL| B[Warehouse]
+  B --> C[Analytics / Models]
+  C --> D[KPIs & Dashboards]
+  D --> E[Stakeholders]
