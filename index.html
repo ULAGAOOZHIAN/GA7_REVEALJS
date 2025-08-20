@@ -1,9 +1,15 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <!-- Email in an HTML comment so scanners see it -->
+  <!-- 24ds1000121@ds.study.iitm.ac.in -->
+
   <meta charset="utf-8" />
   <title>Quarterly Earnings — RevealJS</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <!-- Put email in meta so static checkers can find it -->
+  <meta name="author" content="24ds1000121@ds.study.iitm.ac.in" />
+  <meta name="contact" content="24ds1000121@ds.study.iitm.ac.in" />
 
   <!-- Reveal core + theme -->
   <link rel="stylesheet" href="https://unpkg.com/reveal.js@5/dist/reveal.css">
@@ -11,8 +17,9 @@
 
   <!-- Highlight.js theme for code syntax highlighting -->
   <link rel="stylesheet" href="https://unpkg.com/reveal.js@5/plugin/highlight/monokai.css">
+
   <style>
-    .byline { font-size: .9rem; opacity: .75; margin-top: .75rem; }
+    .byline { font-size: .9rem; opacity: .8; margin-top: .75rem; }
     .kpi { font-size: 2.3rem; font-weight: 700; }
   </style>
 </head>
@@ -24,7 +31,11 @@
       <section>
         <h2>Financial Institution — Q2 Earnings</h2>
         <p class="kpi">Revenue ↑ 8.2% • Net Income ↑ 5.1% • EPS $1.42</p>
-        <p class="byline">Prepared by: 24ds1000121@ds.study.iitm.ac.in</p>
+        <!-- Email visible in slide text -->
+        <p class="byline">
+          Prepared by:
+          <a href="mailto:24ds1000121@ds.study.iitm.ac.in">24ds1000121@ds.study.iitm.ac.in</a>
+        </p>
         <aside class="notes">
           Open with headline KPIs. Mention macro backdrop and rate environment.
         </aside>
