@@ -1,29 +1,27 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <!-- Email in an HTML comment so scanners see it -->
   <!-- 24ds1000121@ds.study.iitm.ac.in -->
-
   <meta charset="utf-8" />
   <title>Quarterly Earnings — RevealJS</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-  <!-- Put email in meta so static checkers can find it -->
   <meta name="author" content="24ds1000121@ds.study.iitm.ac.in" />
-  <meta name="contact" content="24ds1000121@ds.study.iitm.ac.in" />
 
-  <!-- Reveal core + theme -->
-  <link rel="stylesheet" href="https://unpkg.com/reveal.js@5/dist/reveal.css">
-  <link rel="stylesheet" href="https://unpkg.com/reveal.js@5/dist/theme/white.css" id="theme">
+  <!-- Reveal core + theme (v4 = stable CDN paths) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/theme/white.css" id="theme">
 
-  <!-- Highlight.js theme for code syntax highlighting -->
-  <link rel="stylesheet" href="https://unpkg.com/reveal.js@5/plugin/highlight/monokai.css">
+  <!-- Code syntax highlighting theme -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/plugin/highlight/monokai.css">
 
   <style>
     .byline { font-size: .9rem; opacity: .8; margin-top: .75rem; }
     .kpi { font-size: 2.3rem; font-weight: 700; }
+    body { background:#fff; }
   </style>
 </head>
 <body>
+  <noscript>This presentation requires JavaScript.</noscript>
   <div class="reveal">
     <div class="slides">
 
@@ -31,7 +29,6 @@
       <section>
         <h2>Financial Institution — Q2 Earnings</h2>
         <p class="kpi">Revenue ↑ 8.2% • Net Income ↑ 5.1% • EPS $1.42</p>
-        <!-- Email visible in slide text -->
         <p class="byline">
           Prepared by:
           <a href="mailto:24ds1000121@ds.study.iitm.ac.in">24ds1000121@ds.study.iitm.ac.in</a>
@@ -68,7 +65,7 @@ These are topline highlights—set the frame before deep dive.
         </aside>
       </section>
 
-      <!-- Slide 4 (Markdown with code block + syntax highlighting) -->
+      <!-- Slide 4 (Markdown with Python code block -> highlighted) -->
       <section data-markdown>
         <textarea data-template>
 ### KPI Snapshot (Code with Syntax Highlighting)
